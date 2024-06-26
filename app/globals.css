@@ -20,7 +20,11 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #141414;
   width: 100%;
-
+  
+}
+header{
+  max-width: 1470px;
+  margin: 0 auto;
 }
 
 @layer utilities {
