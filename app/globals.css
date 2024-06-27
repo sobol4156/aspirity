@@ -22,7 +22,7 @@ body {
   width: 100%;
   
 }
-header{
+header, main{
   max-width: 1470px;
   margin: 0 auto;
 }
@@ -32,3 +32,14 @@ header{
     text-wrap: balance;
   }
 }
+
+/* globals.css */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, and Opera */
+}
+

@@ -1,0 +1,21 @@
+.employee__link{
+    border-bottom: 1px solid #363738;
+    padding: 0 12px 6px;
+    cursor: pointer;
+}
+.active{
+    border-bottom: 2px solid #0047BB;
+    color: #E1E3E6;
+}
+@media(width<675px){
+    .profile-info{
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-name{
+        text-align: center;
+    }
+    .profile-post{
+        text-align: center;
+    }
+}
