@@ -29,9 +29,31 @@ export default function Home() {
           </ul>
         </nav>
       </section>
-      <section className="vacation">
-        <div>
-          
+      <section className="vacation mt-4 ">
+        <div className="bg-[#232324] p-8 rounded-xl statistics">
+          <div className="flex gap-2 items-center">
+            <h3 className="text-2xl">Cтатистика</h3>
+            <Image className="h-6 w-6 cursor-pointer" src='/image/info.webp' alt="info"  width={24} height={24}/>
+          </div>
+          <div className="flex justify-center mt-4">
+          <Image src='/image/progress-bar.webp' alt="logo" width={160} height={160} />
+          </div>
+          <div className="mt-3">
+            <ul className="statistics__list flex flex-col gap-2">
+              <li className="statistics__item">
+                <span className="statistics__item-text green">Доступно сейчас</span>
+                <span>32 дня</span>
+              </li>
+              <li className="statistics__item">
+                <span className="statistics__item-text yellow">Запланировано</span>
+                <span>8 дней</span>
+              </li>
+              <li className="statistics__item">
+                <span className="statistics__item-text red">Использовано/недоступно</span>
+                <span>4 дня</span>
+              </li>
+            </ul>
+          </div>
         </div>
         <div>
 
