@@ -7,8 +7,13 @@
   border-bottom: 2px solid #0047bb;
   color: #e1e3e6;
 }
+
+.vacation{
+    max-height: 444px;
+}
 .statistics {
   max-width: 516px;
+  flex: 1;
 }
 .statistics__item {
   display: flex;
@@ -47,6 +52,16 @@
   background: #008000;
   border: 1px solid #25824f;
 }
+
+.history{
+    max-width: 962px;
+    flex: 1;
+    min-width: 480px;
+}
+
+.history__list li:not(:last-child) {
+    border-bottom: 1px solid #363738; 
+  }
 
 @media (width<675px) {
   .profile-info {

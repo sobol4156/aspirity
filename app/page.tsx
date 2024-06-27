@@ -7,7 +7,7 @@ export default function Home() {
       {/* back to List */}
       <div className="flex gap-3 items-center p-3">
         <Image className="h-3.5" src="/image/arrowLeft.webp" alt="" width={8} height={14} />
-        <span className="text-[#76787A] text-sm	">Вернуться к сотрудникам</span>
+        <span className="text-[#76787A] text-sm cursor-pointer">Вернуться к сотрудникам</span>
       </div>
       {/* Employee */}
       <section className="bg-[#232324] p-8 rounded-xl">
@@ -29,14 +29,14 @@ export default function Home() {
           </ul>
         </nav>
       </section>
-      <section className="vacation mt-4 ">
+      <section className="vacation mt-4 flex gap-4">
         <div className="bg-[#232324] p-8 rounded-xl statistics">
           <div className="flex gap-2 items-center">
             <h3 className="text-2xl">Cтатистика</h3>
-            <Image className="h-6 w-6 cursor-pointer" src='/image/info.webp' alt="info"  width={24} height={24}/>
+            <Image className="h-6 w-6 cursor-pointer" src='/image/info.webp' alt="info" width={24} height={24} />
           </div>
           <div className="flex justify-center mt-4">
-          <Image src='/image/progress-bar.webp' alt="logo" width={160} height={160} />
+            <Image src='/image/progress-bar.webp' alt="logo" width={160} height={160} />
           </div>
           <div className="mt-3">
             <ul className="statistics__list flex flex-col gap-2">
@@ -55,8 +55,48 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div>
-
+        <div className="history bg-[#232324] p-8 rounded-xl">
+          <div className="text-[#E1E3E6]">
+            <div className="flex justify-between items-center">
+              <h3 className="text-2xl">История отпусков</h3>
+              <span className="text-[#76787A] text-sm cursor-pointer">Посмотреть все</span>
+            </div>
+            <div className="mt-6">
+              <ul className="history__list">
+                {/* title LI */}
+                <li className="flex justify-between px-2 py-4 text-[#B0B1B6]">
+                  <span className="mr-4">Тип</span>
+                  <span className="mr-4">Даты отпуска</span>
+                  <span>Количество дней</span>
+                </li>
+                <li className="flex justify-between px-2 py-4 ">
+                  <span className="mr-4">Отпуск</span>
+                  <span className="flex gap-4 items-center mr-4 ">03 марта 2023 <Image src='/image/yellowArrow.webp' alt="arrow" width={18} height={14}/> 23 марта 2023</span>
+                  <span>20</span>
+                </li>
+                <li className="flex justify-between px-2 py-4 ">
+                  <span className="mr-4">Отгул</span>
+                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14}/> 7 марта 2023</span>
+                  <span>4</span>
+                </li>
+                <li className="flex justify-between px-2 py-4 ">
+                  <span className="mr-4">Отгул</span>
+                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14}/> 7 марта 2023</span>
+                  <span>4</span>
+                </li>
+                <li className="flex justify-between px-2 py-4 ">
+                  <span className="mr-4">Отгул</span>
+                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14}/> 7 марта 2023</span>
+                  <span>4</span>
+                </li>
+                <li className="flex justify-between px-2 py-4 ">
+                  <span className="mr-4">Отгул</span>
+                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14}/> 7 марта 2023</span>
+                  <span>4</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </div>
