@@ -38,7 +38,7 @@ export default function Home() {
           <div className="flex justify-center mt-4">
             <Image src='/image/progress-bar.webp' alt="logo" width={160} height={160} />
           </div>
-          <div className="mt-3">
+          <div className="mt-4">
             <ul className="statistics__list flex flex-col gap-2">
               <li className="statistics__item">
                 <span className="statistics__item-text green">Доступно сейчас</span>

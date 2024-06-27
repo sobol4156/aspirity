@@ -63,6 +63,15 @@
     border-bottom: 1px solid #363738; 
   }
 
+  @media(width<890px){
+    .vacation {
+        flex-direction: column;
+    }
+    .statistics{
+        max-width: none;
+    }
+  }
+
 @media (width<675px) {
   .profile-info {
     flex-direction: column;
