@@ -2,7 +2,9 @@
   border-bottom: 1px solid #363738;
   padding: 0 12px 6px;
   cursor: pointer;
+
 }
+
 .active {
   border-bottom: 2px solid #0047bb;
   color: #e1e3e6;
@@ -19,12 +21,19 @@
   flex: 1;
   color: #E1E3E6;
 }
+
 .statistics__item {
   display: flex;
   justify-content: space-between;
   padding: 12px 10px 12px 12px;
   border-radius: 12px;
   border: 1px solid #363738;
+  transition: transform ease 0.3s;
+  cursor: default;
+}
+.statistics__item:hover{
+    transform: scale(1.01);
+    border: 1px solid white;
 }
 .statistics__list {
   color: #e1e3e6;
@@ -33,7 +42,7 @@
   position: relative;
   padding-left: 12px;
 }
-.statistics__item-text:before {
+.statistics__item-text::before {
   content: "";
   position: absolute;
   left: 0;

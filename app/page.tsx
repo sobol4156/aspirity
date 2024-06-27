@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image";
 import "./employee.css";
+import { useState } from "react";
 
 export default function Home() {
+  const [showInfo, setShowInfo] = useState(false);
   return (
     <div className="flex flex-col font-poppins">
       {/* back to List */}
@@ -31,12 +34,26 @@ export default function Home() {
       </section>
       <section className="vacation mt-4 flex gap-4">
         <div className="bg-[#232324] p-8 rounded-xl statistics">
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center relative">
             <h3 className="text-2xl statistics-title">Cтатистика</h3>
-            <Image className="h-6 w-6 cursor-pointer" src='/image/info.webp' alt="info" width={24} height={24} />
+            <Image className="statistics__info-icon h-6 w-6 cursor-pointer" src='/image/info.webp' alt="info"
+              width={24}
+              height={24}
+              onMouseEnter={() => setShowInfo(true)}
+              onMouseLeave={() => setShowInfo(false)} />
+            {showInfo && (
+              <div className="absolute bottom-0 top-0 left-40 ml-2  py-4 px-2 bg-[#303030] text-[#E1E3E6] rounded shadow-lg flex items-center">
+                <span>1 раб. месяц = 3 дня отпуска</span>
+              </div>
+            )}
           </div>
-          <div className="flex justify-center mt-4">
-            <Image src='/image/progress-bar.webp' alt="logo" width={160} height={160} />
+          <div className="flex justify-center mt-4  ">
+            <Image src='/image/progress-bar.webp' alt="logo"
+              width={160}
+              height={160}
+
+            />
+
           </div>
           <div className="mt-4">
             <ul className="statistics__list flex flex-col gap-2">
