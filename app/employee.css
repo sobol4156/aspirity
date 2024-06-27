@@ -7,6 +7,9 @@
   border-bottom: 2px solid #0047bb;
   color: #e1e3e6;
 }
+.history-mobile{
+    display: none;
+}
 
 .vacation{
     max-height: 444px;
@@ -14,6 +17,7 @@
 .statistics {
   max-width: 516px;
   flex: 1;
+  color: #E1E3E6;
 }
 .statistics__item {
   display: flex;
@@ -66,9 +70,13 @@
   @media(width<890px){
     .vacation {
         flex-direction: column;
+        max-height: none
     }
     .statistics{
         max-width: none;
+    }
+    .history{
+        margin-bottom: 32px;
     }
   }
 
@@ -83,4 +91,19 @@
   .profile-post {
     text-align: center;
   }
+}
+@media(width<530px){
+    .history{
+        display: none;
+    }
+    .history-mobile{
+        display: block;
+    }
+    .statistics{
+        padding: 24px 16px;
+    }
+    .statistics-title{
+        font-size: 16px;
+        line-height: 24px;
+    }
 }

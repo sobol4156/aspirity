@@ -30,7 +30,7 @@ export default function RootLayout({
             <Image className="h-3 ml-2 cursor-pointer" src="/image/burgerMenu.webp" alt="Menu" width={18} height={12} />
           </div>
         </header>
-        <main className="px-5">
+        <main className="main px-5 ">
           {children}
         </main>
       </body>

@@ -32,7 +32,7 @@ export default function Home() {
       <section className="vacation mt-4 flex gap-4">
         <div className="bg-[#232324] p-8 rounded-xl statistics">
           <div className="flex gap-2 items-center">
-            <h3 className="text-2xl">Cтатистика</h3>
+            <h3 className="text-2xl statistics-title">Cтатистика</h3>
             <Image className="h-6 w-6 cursor-pointer" src='/image/info.webp' alt="info" width={24} height={24} />
           </div>
           <div className="flex justify-center mt-4">
@@ -71,32 +71,127 @@ export default function Home() {
                 </li>
                 <li className="flex justify-between px-2 py-4 ">
                   <span className="mr-4">Отпуск</span>
-                  <span className="flex gap-4 items-center mr-4 ">03 марта 2023 <Image src='/image/yellowArrow.webp' alt="arrow" width={18} height={14}/> 23 марта 2023</span>
+                  <span className="flex gap-4 items-center mr-4 ">03 марта 2023 <Image src='/image/yellowArrow.webp' alt="arrow" width={18} height={14} /> 23 марта 2023</span>
                   <span>20</span>
                 </li>
                 <li className="flex justify-between px-2 py-4 ">
                   <span className="mr-4">Отгул</span>
-                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14}/> 7 марта 2023</span>
+                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14} /> 7 марта 2023</span>
                   <span>4</span>
                 </li>
                 <li className="flex justify-between px-2 py-4 ">
                   <span className="mr-4">Отгул</span>
-                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14}/> 7 марта 2023</span>
+                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14} /> 7 марта 2023</span>
                   <span>4</span>
                 </li>
                 <li className="flex justify-between px-2 py-4 ">
                   <span className="mr-4">Отгул</span>
-                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14}/> 7 марта 2023</span>
+                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14} /> 7 марта 2023</span>
                   <span>4</span>
                 </li>
                 <li className="flex justify-between px-2 py-4 ">
                   <span className="mr-4">Отгул</span>
-                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14}/> 7 марта 2023</span>
+                  <span className="flex gap-4 items-center mr-4">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14} /> 7 марта 2023</span>
                   <span>4</span>
                 </li>
               </ul>
             </div>
           </div>
+        </div>
+        <div className="history-mobile bg-[#232324] px-4 py-8 rounded-xl mb-8">
+
+          <div className="flex justify-between items-center">
+            <h3 >История отпусков</h3>
+            <span className="text-[#76787A] text-sm cursor-pointer">Посмотреть все</span>
+          </div>
+
+          <ul className="history__list">
+            {/* title LI */}
+            <li className="flex flex-col px-2 py-4 gap-4">
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Тип</span>
+                <span className="">Отпуск</span>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Даты отпуска</span>
+                <span className="flex gap-2.5 items-center mr-4 ">03 марта 2023 <Image src='/image/yellowArrow.webp' alt="arrow" width={18} height={14} /> 23 марта 2023</span>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Количество дней</span>
+                <span>20</span>
+              </div>
+
+            </li>
+
+
+            <li className="flex flex-col px-2 py-4 gap-4">
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Тип</span>
+                <span className="">Больничный</span>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Даты отпуска</span>
+                <span className="flex gap-2.5 items-center mr-4 ">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14} /> 7 марта 2023</span>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Количество дней</span>
+                <span>4</span>
+              </div>
+
+            </li>
+
+            <li className="flex flex-col px-2 py-4 gap-4">
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Тип</span>
+                <span className="">Больничный</span>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Даты отпуска</span>
+                <span className="flex gap-2.5 items-center mr-4 ">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14} /> 7 марта 2023</span>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Количество дней</span>
+                <span>4</span>
+              </div>
+
+            </li>
+            <li className="flex flex-col px-2 py-4 gap-4">
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Тип</span>
+                <span className="">Больничный</span>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Даты отпуска</span>
+                <span className="flex gap-2.5 items-center mr-4 ">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14} /> 7 марта 2023</span>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Количество дней</span>
+                <span>4</span>
+              </div>
+
+            </li>
+            <li className="flex flex-col px-2 py-4 gap-4">
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Тип</span>
+                <span className="">Больничный</span>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Даты отпуска</span>
+                <span className="flex gap-2.5 items-center mr-4 ">03 марта 2023 <Image src='/image/redArrow.webp' alt="arrow" width={18} height={14} /> 7 марта 2023</span>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className=" text-[#76787A]">Количество дней</span>
+                <span>4</span>
+              </div>
+
+            </li>
+          </ul>
+
         </div>
       </section>
     </div>
