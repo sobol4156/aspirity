@@ -2,24 +2,28 @@
   border-bottom: 1px solid #363738;
   padding: 0 12px 6px;
   cursor: pointer;
-
+  transition: all 0.3s ease;
+}
+.employee__link:hover {
+  color: #e1e3e6;
+  transform: scale(1.01);
 }
 
 .active {
   border-bottom: 2px solid #0047bb;
   color: #e1e3e6;
 }
-.history-mobile{
-    display: none;
+.history-mobile {
+  display: none;
 }
 
-.vacation{
-    max-height: 444px;
+.vacation {
+  max-height: 444px;
 }
 .statistics {
   max-width: 516px;
   flex: 1;
-  color: #E1E3E6;
+  color: #e1e3e6;
 }
 
 .statistics__item {
@@ -31,9 +35,9 @@
   transition: transform ease 0.3s;
   cursor: default;
 }
-.statistics__item:hover{
-    transform: scale(1.01);
-    border: 1px solid white;
+.statistics__item:hover {
+  transform: scale(1.01);
+  border: 1px solid white;
 }
 .statistics__list {
   color: #e1e3e6;
@@ -66,28 +70,35 @@
   border: 1px solid #25824f;
 }
 
-.history{
-    max-width: 962px;
-    flex: 1;
-    min-width: 480px;
+.history {
+  max-width: 962px;
+  flex: 1;
+  min-width: 480px;
 }
 
 .history__list li:not(:last-child) {
-    border-bottom: 1px solid #363738; 
-  }
+  border-bottom: 1px solid #363738;
+}
 
-  @media(width<890px){
-    .vacation {
-        flex-direction: column;
-        max-height: none
-    }
-    .statistics{
-        max-width: none;
-    }
-    .history{
-        margin-bottom: 32px;
-    }
+
+
+.progress-ring__circle{
+  stroke-dasharray: 50 1;
+}
+
+
+@media (width<890px) {
+  .vacation {
+    flex-direction: column;
+    max-height: none;
   }
+  .statistics {
+    max-width: none;
+  }
+  .history {
+    margin-bottom: 32px;
+  }
+}
 
 @media (width<675px) {
   .profile-info {
@@ -101,18 +112,18 @@
     text-align: center;
   }
 }
-@media(width<530px){
-    .history{
-        display: none;
-    }
-    .history-mobile{
-        display: block;
-    }
-    .statistics{
-        padding: 24px 16px;
-    }
-    .statistics-title{
-        font-size: 16px;
-        line-height: 24px;
-    }
+@media (width<530px) {
+  .history {
+    display: none;
+  }
+  .history-mobile {
+    display: block;
+  }
+  .statistics {
+    padding: 24px 16px;
+  }
+  .statistics-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

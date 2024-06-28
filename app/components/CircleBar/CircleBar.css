@@ -1,0 +1,25 @@
+
+
+.donut-chart {
+    position: relative;
+    display: block;
+    margin: auto;
+  }
+  
+  .donut-segment {
+    transition: transform 0.3s ease, stroke-width 0.3s ease;
+    transform-origin: 50% 50%;
+  }
+  
+  .donut-segment.hovered {
+    transform: scale(1.04);
+    stroke-width: 20px;
+  }
+  
+  .donut-text {
+    font-size: 2em;
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+  

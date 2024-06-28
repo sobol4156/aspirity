@@ -2,15 +2,17 @@
 import Image from "next/image";
 import "./employee.css";
 import { useState } from "react";
+import CircleBar from "./components/CircleBar/CircleBar";
 
 export default function Home() {
   const [showInfo, setShowInfo] = useState(false);
+  const [hoveredSegment, setHoveredSegment] = useState<null| number>(null);
   return (
     <div className="flex flex-col font-poppins">
       {/* back to List */}
-      <div className="flex gap-3 items-center p-3 ">
-        <Image className="h-3.5 cursor-pointer" src="/image/arrowLeft.webp" alt="" width={8} height={14} />
-        <span className="text-[#76787A] text-sm  font-semibold cursor-pointer">ВЕРНУТЬСЯ К СОТРУДНИКАМ</span>
+      <div className="inline-flex w-64 gap-3 items-center p-3 ">
+        <Image className=" h-3.5 cursor-pointer" src="/image/arrowLeft.webp" alt="" width={8} height={14} />
+        <span className=" text-[#76787A] text-sm  font-semibold cursor-pointer">ВЕРНУТЬСЯ К СОТРУДНИКАМ</span>
       </div>
       {/* Employee */}
       <section className="bg-[#232324] p-8 rounded-xl">
@@ -48,27 +50,38 @@ export default function Home() {
             )}
           </div>
           <div className="flex justify-center mt-4  ">
-            <Image src='/image/progress-bar.webp' alt="logo"
+            {/* <Image src='/image/progress-bar.webp' alt="logo"
               width={160}
               height={160}
-
-            />
-
+            /> */}
+          <CircleBar hoveredSegment={hoveredSegment} />
           </div>
-          <div className="mt-4">
+          <div className="">
             <ul className="statistics__list flex flex-col gap-2">
-              <li className="statistics__item">
-                <span className="statistics__item-text green">Доступно сейчас</span>
-                <span>32 дня</span>
-              </li>
-              <li className="statistics__item">
-                <span className="statistics__item-text yellow">Запланировано</span>
-                <span>8 дней</span>
-              </li>
-              <li className="statistics__item">
-                <span className="statistics__item-text red">Использовано/недоступно</span>
-                <span>4 дня</span>
-              </li>
+            <li
+            className="statistics__item"
+            onMouseEnter={() => setHoveredSegment(0)}
+            onMouseLeave={() => setHoveredSegment(null)}
+          >
+            <span className="statistics__item-text green">Доступно сейчас</span>
+            <span>32 дня</span>
+          </li>
+          <li
+            className="statistics__item"
+            onMouseEnter={() => setHoveredSegment(2)}
+            onMouseLeave={() => setHoveredSegment(null)}
+          >
+            <span className="statistics__item-text yellow">Запланировано</span>
+            <span>8 дней</span>
+          </li>
+          <li
+            className="statistics__item"
+            onMouseEnter={() => setHoveredSegment(1)}
+            onMouseLeave={() => setHoveredSegment(null)}
+          >
+            <span className="statistics__item-text red">Использовано/недоступно</span>
+            <span>4 дня</span>
+          </li>
             </ul>
           </div>
         </div>
