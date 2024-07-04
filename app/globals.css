@@ -39,4 +39,7 @@ header, main{
   .main{
     padding: 0;
   }
+  .showInfo{
+    left: 120px;
+  }
 }

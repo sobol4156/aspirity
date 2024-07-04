@@ -44,7 +44,7 @@ export default function Home() {
               onMouseEnter={() => setShowInfo(true)}
               onMouseLeave={() => setShowInfo(false)} />
             {showInfo && (
-              <div className="absolute bottom-0 top-0 left-40 ml-2  py-4 px-2 bg-[#303030] text-[#E1E3E6] rounded shadow-lg flex items-center">
+              <div className="showInfo absolute h-12 bottom-0 top-0 left-40 ml-2  py-4 px-2 bg-[#303030] text-[#E1E3E6] rounded shadow-lg flex items-center">
                 <span>1 раб. месяц = 3 дня отпуска</span>
               </div>
             )}
